@@ -804,6 +804,53 @@ html[data-theme="dark"] .fact-item p {
 html[data-theme="dark"] .fact-item h3 {
   color: #fff !important;
 }
+/* Dark mode - About Box */
+[data-theme="dark"] .about-box {
+    background-color: #000;
+    color: #fff;
+}
+/* 🌙 Dark Mode - Select Box */
+[data-theme="dark"] .form-select {
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+/* Dropdown arrow color fix */
+[data-theme="dark"] .form-select {
+    filter: brightness(0.9);
+}
+
+/* Focus state */
+[data-theme="dark"] .form-select:focus {
+    border-color: #4da3ff;
+    box-shadow: 0 0 0 0.2rem rgba(77, 163, 255, 0.25);
+}
+
+/* Floating label */
+[data-theme="dark"] .form-floating > label {
+    color: #ccc;
+}
+
+/* When active (selected/focus) */
+[data-theme="dark"] .form-floating > .form-select:focus ~ label,
+[data-theme="dark"] .form-floating > .form-select:not(:placeholder-shown) ~ label {
+    color: #4da3ff;
+}
+/* Heading color */
+[data-theme="dark"] .about-box h6 {
+    color: #fff;
+}
+/* 🌙 Dark Mode - Team Card */
+[data-theme="dark"] .team-card {
+    background-color: #1e1e1e;
+    color: #fff;
+    box-shadow: 0 5px 20px rgba(255,255,255,0.05);
+}
+/* Paragraph color */
+[data-theme="dark"] .about-box p {
+    color: #ccc;
+}
 
 [data-theme="dark"] .service-text {
  background-color: #000;
