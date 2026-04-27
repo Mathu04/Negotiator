@@ -405,7 +405,11 @@
     background-size: cover;
     
 }
-
+.page-headerr {
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/cta3.png) center center no-repeat;
+    background-size: cover;
+    
+}
 .page-header .breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);
 }
@@ -414,6 +418,51 @@
 .page-header .breadcrumb-item a {
     font-size: 18px;
     color: var(--light);
+}
+
+.page-headerr .breadcrumb-item+.breadcrumb-item::before {
+    color: var(--light);
+}
+
+.page-headerr .breadcrumb-item,
+.page-headerr .breadcrumb-item a {
+    font-size: 18px;
+    color: var(--light);
+}
+.custom-header {
+    position: relative;
+    background: url('../img/about4.jpg') center center/cover no-repeat;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dark overlay */
+.custom-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Content above overlay */
+.custom-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Breadcrumb styling */
+.breadcrumb-item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: #00c3ff;
 }
 
 
@@ -489,8 +538,61 @@
         opacity: 0;
     }
 }
+/* Common header style (reuse for all pages) */
+.custom-header,
+.contact-header,
+.services-header,
+.about-header {
+    position: relative;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+/* Overlay */
+.custom-header::before,
+.contact-header::before,
+.services-header::before,
+.about-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
 
+/* Content above overlay */
+.custom-header .container,
+.contact-header .container,
+.services-header .container,
+.about-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Breadcrumb */
+.breadcrumb-item a {
+    color: #fff;
+    text-decoration: none;
+}
+.breadcrumb-item.active {
+    color: #00c3ff;
+}
+
+.contact-header {
+    background: url('../img/case1.webp') center/cover no-repeat;
+}
+.logo-text {
+    font-size: 24px;
+    font-weight: 500;
+    color: #000; /* change based on your navbar */
+    letter-spacing: 1px;
+}
+
+/* If navbar is dark */
+.navbar-dark .logo-text {
+    color: #fff;
+}
 /*** Service ***/
 .service-item .service-text {
     position: relative;
